@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TwoWay Bits</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>TwoWay Bits</h1>
+      <p class="credit">Crafted by Rashed</p>
+    </div>
+
+    <main>
+      <div class="modes">
+        <button type="button" class="mode active" data-mode="bin2dec">
+          Binary → Decimal
+        </button>
+        <button type="button" class="mode" data-mode="dec2bin">
+          Decimal → Binary
+        </button>
+      </div>
+      <form>
+        <label for="binary">Enter bits (0s and 1s):</label>
+        <input
+          type="text"
+          id="binary"
+          name="binary"
+          inputmode="numeric"
+          placeholder="e.g. 1011"
+          autocomplete="off"
+          required
+        />
+        <button type="submit">Convert</button>
+      </form>
+
+      <div class="output">
+        <h2>Output:</h2>
+        <p id="result"></p>
+      </div>
+    </main>
+  </body>
+</html>

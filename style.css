@@ -1,0 +1,152 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #7dd3fc;
+  --error: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--card);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nav h1 {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.credit {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+main {
+  width: 100%;
+  max-width: 480px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form,
+.output {
+  background: var(--card);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+input {
+  padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  font-family: ui-monospace, Consolas, monospace;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid transparent;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+input.error {
+  border-color: var(--error);
+}
+
+button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+.output h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+#result {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: ui-monospace, Consolas, monospace;
+  word-break: break-all;
+  min-height: 2.5rem;
+}
+
+#result.error {
+  color: var(--error);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+.modes {
+  display: flex;
+  gap: 0.5rem;
+  background: var(--card);
+  padding: 0.4rem;
+  border-radius: 12px;
+}
+
+.mode {
+  flex: 1;
+  background: transparent;
+  color: var(--muted);
+}
+
+.mode.active {
+  background: var(--accent);
+  color: var(--bg);
+}
